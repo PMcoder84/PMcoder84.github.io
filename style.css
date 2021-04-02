@@ -8,6 +8,21 @@ This way this property becomes configurable. If you want to change, you have to 
     --primary-color: #111
 }
 
+header{
+    display: flex;
+    justify-content: flex-end; 
+    width: 90%;
+}
+
+header a{
+    color: #fff;
+    z-index: 20;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration-line: none;
+    
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
