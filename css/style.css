@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300&display=swap');
+
+
+/* variable property. in this case color used can be reused for many elements. 
+This way this property becomes configurable. If you want to change, you have to change it in one place*/
+
+:root {
+    --primary-color: #111
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+}
+
+
+h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+p {
+    margin: 20px 0 10px;
+    font-size: 1.1rem;  /* by default font size is 16px in body or html and 1.1 rem is 1.1. times 16px*/
+}
+
+section {
+    
+    display: flex;
+    height: 100vh;     /*  viewport height of box */
+    align-items: center;
+    justify-content: center;
+    /* padding: 281px; */
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 30px;
+}
+
+.btn:hover{
+    transform: scale(0.98);
+}
+
+.logo {
+    position: absolute;
+    color: #fff;
+    top: 30px;
+    left: 100px;
+    font-size: 2rem;
+    font-weight: 700;
+    z-index: 20;  /* element is more towards you */
+    
+}
+
+.logo:hover{
+    color: steelblue;
+}
+
+/* TOGGLE */
+
+.toggle {
+
+    background: var(--primary-color) url(../images/menu.png);
+    position: fixed;
+    top:0;
+    right:0;
+    width: 60px;
+    height: 60px;    
+    z-index: 20;
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transform: scale(0.90);
+}
+
+
+
+.toggle:hover {
+    transform: scale(0.88);
+}
+
+.toggle.active {
+
+    background: var(--primary-color) url(../images/close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(0.50)
+
+}
+
+
+/* HOME PAGE */
+
+.home-content{
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    
+}
+
+.home-img {
+    /* background-image: url('images/.home-img.jpg'); */
+    /* object-fit: cover; */
+    position:absolute;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* background-size: cover; */
+    height: 180%;   /*height of the image changes based on the window size.*/
+    /* transform: scale(0.7); */
+}
+
+
+/* NAVIGATION */
+.navigation {
+    position: fixed;
+    top: 0;
+    left:  100%;
+    width: 100%;
+    height: 100%;
+    background-color: #0d0d0d;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navigation.active {
+    left: 0;
+}
+
+.navigation ul {
+    position: relative;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;    /*to remove bullet points*/
+    text-align: center;    
+    
+}
+
+.navigation ul li a {
+    font-size: 2.2rem;
+    text-decoration: none; /* to get rid of the underline*/
+    font-weight: 300;
+    color: #fff;
+}
+
+
+.navigation ul li a:hover {
+    color: steelblue;
+}
+
+.navigation .social-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navigation .social-bar a {
+    display: inline-block;
+    transform: scale(0.5);
+}
+
+.navigation .email-icon {
+    position: absolute;
+    bottom: 20px;
+    transform: scale(0.5);
+}
+
+
+
+
+@media (max-width: 1068px) {
+    .home-img {
+        display: none;
+    }
+
+    .logo {
+        top: 10px;
+        left: 40px;
+        font-size: 1.5rem;
+    }
+
+    .navigation ul li a {
+        font-size: 1.5rem;
+    }
+
+    
+
+}
