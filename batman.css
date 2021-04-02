@@ -46,19 +46,4 @@ section img:hover {
     margin-top: 20px;
 }
 
-/* .icon {
-
-    position: fixed;
-    /* color: #fff; */
-    top: 0;
-    left: 0;
-    z-index: 20;  /* element is more towards you */
-    transform: scale(0.20);    
-    cursor: pointer;
-    
-}
-
-.icon:hover {
-    transform: scale(0.30);
-} */
 
